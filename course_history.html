@@ -3,12 +3,6 @@
     <head>
         <title>Malavika Unnikrishnan - First HTML Page</title>
     </head>
-    <style>
-        .registration-link{
-            background-color: azure;
-            align-items: center;
-        }
-    </style>
 <body>
     <h1 style="background-color:rgb(223, 118, 110);color:azure" align = 'center'>List of Courses Completed</h1>
     <div class = 'course-list'>
@@ -68,7 +62,7 @@
     <div class = 'registration-link'>
         <a>
             <h3> Register Here! </h3>
-            <form action="/action_page.php">
+            <form target = "_blank">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" value="Enter Name"><br>
                 <label for="ph-number">Phone number:</label><br>
@@ -93,6 +87,7 @@
                 <input type="checkbox" id="webdev" name="subject-interests" value="Web Development">
                 <label for="webdev">Web Development</label>
                 <br>
+                <input type = "submit" id = "submit" value = "Submit">
             </form>
         </a>
     </div>
