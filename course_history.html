@@ -3,6 +3,12 @@
     <head>
         <title>Malavika Unnikrishnan - First HTML Page</title>
     </head>
+    <style>
+        .registration-link{
+            background-color: azure;
+            align-items: center;
+        }
+    </style>
 <body>
     <h1 style="background-color:rgb(223, 118, 110);color:azure" align = 'center'>List of Courses Completed</h1>
     <div class = 'course-list'>
@@ -61,8 +67,32 @@
     </div>
     <div class = 'registration-link'>
         <a>
-            <form>
-                Register
+            <h3> Register Here! </h3>
+            <form action="/action_page.php">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" value="Enter Name"><br>
+                <label for="ph-number">Phone number:</label><br>
+                <input type="number" id="ph-number" name="ph-number" value="Enter 10 digit phone number"><br><br>
+                <label for="course-choice">Choice of Course:</label><br>
+                <input type="radio" id="bachelors" name="course-choice" value="Bachelors">
+                <label for="bachelors">Bachelors</label>
+                <br>
+                <input type="radio" id="masters" name="course-choice" value="Masters">
+                <label for="masters">Masters</label>
+                <br>
+                <label for="description">Description:</label><br>
+                <input type="test" id="description" name="description" value="Description"><br>
+
+                <label for="subject-interests">Subject interests:</label><br>
+                <input type="checkbox" id="deeplearning" name="subject-interests" value="Deep Learning">
+                <label for="deeplearning">Deep Learning</label>
+                <br>
+                <input type="checkbox" id="softwaredev" name="subject-interests" value="Software Development">
+                <label for="softwaredev">Software Development</label>
+                <br>
+                <input type="checkbox" id="webdev" name="subject-interests" value="Web Development">
+                <label for="webdev">Web Development</label>
+                <br>
             </form>
         </a>
     </div>
