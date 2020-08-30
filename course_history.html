@@ -3,6 +3,30 @@
     <head>
         <title>Malavika Unnikrishnan - First HTML Page</title>
     </head>
+    <style>
+        .registration-link a:link {
+        color: rgb(217, 255, 0);
+        }
+
+        .registration-link a:visited {
+        color: green;
+        }
+
+        .registration-link a:hover {
+        color: hotpink;
+        }
+
+        .registration-link a:active {
+        color: blue;
+        }
+
+        .registration-form{
+            display: none;
+        }
+        .registration-form:target{
+            display:block;
+        }
+    </style>
 <body>
     <h1 style="background-color:rgb(223, 118, 110);color:azure" align = 'center'>List of Courses Completed</h1>
     <div class = 'course-list'>
@@ -60,8 +84,8 @@
         </ol>
     </div>
     <div class = 'registration-link'>
-        <h3> Register Here! </h3>
-        <form target = "_blank">
+        <a href = "#registration-form">Register Here!</a>
+        <form target = "_blank" class = "registration-form" id = "registration-form">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" value="Enter Name"><br>
             <label for="ph-number">Phone number:</label><br>
@@ -86,7 +110,7 @@
             <input type="checkbox" id="webdev" name="subject-interests" value="Web Development">
             <label for="webdev">Web Development</label>
             <br>
-            <input type = "submit" id = "submit" value = "Submit">
+            <button type = "submit" id = "submit" value = "Submit">
         </form>
     </div>
 </body>
