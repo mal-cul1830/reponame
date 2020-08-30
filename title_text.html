@@ -46,6 +46,20 @@
             outline-style: double;
             border-style: solid;
         }
+        tr[class='table-even']{
+            background-color: white;
+        }
+        tr[class='table-odd']{
+            background-color:pink;
+        }
+        th[id='Column1']{
+            background-color:black;
+            color:white;
+        }
+        th[id='Column2']{
+            background-color:rgb(87, 0, 95);
+            color:white;
+        }
     </style>
     <style>
         
@@ -64,13 +78,13 @@
             </ul>
             <img src = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/011019-timothee-chalamet-1547142095.png?resize=480:*' alt = 'Timothee Chalamet'>
             <table>
-                <th>
+                <th class = 'table-header' id = 'Column1'>
                     Column1
                 </th>
-                <th>
+                <th class = 'table-header' id = 'Column2'>
                     Column2
                 </th>
-                <tr>
+                <tr class = 'table-even' >
                     <td>
                         Item11
                     </td>
@@ -78,13 +92,21 @@
                         Item12
                     </td>
                 </tr>
-                <tr>
+                <tr class = 'table-odd'>
 
                     <td>
                         Item21
                     </td>
                     <td>
                         Item22
+                    </td>
+                </tr>
+                <tr class = 'table-even' >
+                    <td>
+                        Item31
+                    </td>
+                    <td>
+                        Item32
                     </td>
                 </tr>
             </table>
