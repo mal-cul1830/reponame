@@ -103,7 +103,6 @@
             <nav>
                 <a href = 'home.html' class = 'nav-element'>Home</a>
                 <a href = 'registration.html' class = 'nav-element'>Register</a>
-                <a href = 'details.html' class = 'nav-element'>Details</a>   
                 </div>
             </nav>
         </div>
@@ -139,23 +138,38 @@
                     <div class = 'grade-table-rows'>
                         <tr>
                             <td style="color:white;background-color: rgb(207, 48, 48);">Elements of Electronics Engineering</td>
-                            <td style="border: 1px solid black;">S</td>
+                            <td style="border: 1px solid black;" id = "eee">90</td>
                         </tr>
                         <tr>
                             <td style="color:white;background-color: rgb(207, 48, 48);">Engineering Chemistry</td>
-                            <td style="border: 1px solid black;">A</td>
+                            <td style="border: 1px solid black;" id = "chem">91</td>
                         </tr>
                         <tr>
                             <td style="color:white;background-color: rgb(207, 48, 48);">Engineering Maths - I</td>
-                            <td style="border: 1px solid black;">A</td>
+                            <td style="border: 1px solid black;" id = "math">93</td>
                         </tr>
                         <tr>
                             <td style="color:white;background-color: rgb(207, 48, 48);">Elements of Mechanical Engineering</td>
-                            <td style="border: 1px solid black;">S</td>
+                            <td style="border: 1px solid black;" id = "eme">91</td>
+                        </tr>
+                        <tr>
+                            <td style="color:white;background-color: rgb(207, 48, 48);">Total Marks</td>
+                            <td style="border: 1px solid black;" id = "total"></td>
+                        </tr>
+                        <tr>
+                            <td style="color:white;background-color: rgb(207, 48, 48);">Average Marks</td>
+                            <td style="border: 1px solid black;" id = "avg"></td>
                         </tr>
                     </div>
                 </table>
             </div>
+            <p id = "avg"></p>
+            
         </div>
+        <script>
+            let x = (parseFloat(document.getElementById("eee").innerText))+(parseFloat(document.getElementById("chem").innerText))+(parseFloat(document.getElementById("math").innerText))+(parseFloat(document.getElementById("eme").innerText));
+            document.getElementById("total").innerHTML = x;
+            document.getElementById("avg").innerHTML = x/4;
+        </script>
     </body>
 </html>
