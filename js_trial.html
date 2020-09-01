@@ -6,12 +6,19 @@
         </title>
     </head>
     <body>
-        <p id = "two-nos"></p>
+        <p id = "no">30.3</p>
+        <p id = "squared"></p>
+        <p id = "ceil"></p>
+        <p id = "round"></p>
+        <p id = "floor"></p>
+        <p id = "sin"></p>
         <script>
-            let x = [1,2,3,4,5];
-            let element = x[2];
-            let str = "" + x[2];
-            document.getElementById("two-nos").innerHTML = "The type of str is: " + str;
+            let n = parseFloat(document.getElementById('no').innerText);
+            document.getElementById('squared').innerHTML = Math.pow(n, 2);
+            document.getElementById('ceil').innerHTML = Math.ceil(n);
+            document.getElementById('round').innerHTML = Math.round(n);
+            document.getElementById('floor').innerHTML = Math.floor(n);
+            document.getElementById('sin').innerHTML = Math.sin(n)    
         </script>
     </body>
 </html>
