@@ -6,19 +6,16 @@
         </title>
     </head>
     <body>
-        <p id = "no">30.3</p>
-        <p id = "squared"></p>
-        <p id = "ceil"></p>
-        <p id = "round"></p>
-        <p id = "floor"></p>
-        <p id = "sin"></p>
+        <p id = "no">3</p>
+        <p id = "returnval"></p>
         <script>
-            let n = parseFloat(document.getElementById('no').innerText);
-            document.getElementById('squared').innerHTML = Math.pow(n, 2);
-            document.getElementById('ceil').innerHTML = Math.ceil(n);
-            document.getElementById('round').innerHTML = Math.round(n);
-            document.getElementById('floor').innerHTML = Math.floor(n);
-            document.getElementById('sin').innerHTML = Math.sin(n)    
+            function trial_fn(a,b,null,ar){
+                console.log(a,b);
+                if(ar.length>a){
+                    document.getElementById("returnval").innerHTML = ar[a]; 
+                }
+            }
+            trial_fn.apply(2,3,[1,2,3]);
         </script>
     </body>
 </html>
