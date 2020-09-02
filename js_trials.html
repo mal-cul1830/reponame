@@ -4,9 +4,48 @@
     <title>TRIAL</title>
 </head>
 <body>
+    <label for = 'in' class = 'in'>Enter Number:</label>
+    <input type = 'number' name = 'in' id= 'in' class = 'in' on></input>
+    <button type = 'button' id = 'button' name = 'submit' value = 'SUBMIT' style = "block-size: 0.3em 0.6em;" onclick = "num_funcs()"></button>
+    <div id = 'ans'></div>
 
 <script>
-    console.log(Date());
+    let input = document.getElementById('in');
+
+    input.addEventListener("keyup", function(event){
+        if(event.code == 13){
+            event.preventDefault();
+            document.getElementById('button').click();
+        }
+    });
+    function num_funcs(){
+        var num = parseInt(input.value);
+        console.log(num);
+        switch(num){
+            case (num>=10 && num<=100):
+                console.log('Number is in the range 10 -100');
+                break;
+            default:
+                console.log('Number is not in the range 10-100');
+                if(num<1){
+                    console.log('FIBBONACI NOT POSSIBLE')
+                }
+                else if(num == 1){
+                    document.write(0 + " ");
+                }
+                else{
+                    let a = 0, b = 1, temp = 0;
+                    for(let i = 0; i<num; ++i){
+                        document.write(a + " ");
+                        temp = b;
+                        b = a + b;
+                        a = temp;                      
+                    }
+                }
+        }
+    }
+
+
 </script>
 </body>
 </html>
