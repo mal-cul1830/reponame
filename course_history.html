@@ -134,12 +134,18 @@
                 && item.checked
                 && item.name === "subject-interests") {
                 ++checkedCount;
+            }
+            if(item.getAttribute('type') === "text"
+            && item.getAttribute('name') === "name"
+            && (Boolean(item.value.toLowerCase().match(/[^a-z ]/g)))){
+                alert("Enter a valid name with ONLY ALPHABETS")
+                return false;
+            }
         }
-    }
-    if(!checkedCount){
-        alert('Select at least one subject interest');
-    }
-    return Boolean(checkedCount);
+        if(!checkedCount){
+            alert('Select at least one subject interest');
+        }
+        return Boolean(checkedCount);
     }
     </script>
 </body>
