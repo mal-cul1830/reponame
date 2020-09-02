@@ -115,7 +115,7 @@
             </div>
             <hr>
             <div class = 'html-info'>
-                <p>
+                <p id = 'html-info'>
                     
                     HTML is the abbreviation for Hyper Text Markup Language.
                     It is a standard markup language that is used for creating Web pages.
@@ -170,6 +170,23 @@
             let x = (parseFloat(document.getElementById("eee").innerText))+(parseFloat(document.getElementById("chem").innerText))+(parseFloat(document.getElementById("math").innerText))+(parseFloat(document.getElementById("eme").innerText));
             document.getElementById("total").innerHTML = x;
             document.getElementById("avg").innerHTML = x/4;
+        </script>
+        <script>
+            let text = document.getElementById('html-info').innerText;
+            let c = 0;
+            let a = [];
+            let start = 0, end = 0;
+            let reg = /[a-zA-Z]/;
+            for(let i = 0; i<text.length; ++i){
+                if(text[i] == ' ' || i == text.length-1){
+                    end = i;
+                    a.push(text.slice(start,end))
+                    start = i;
+                }
+            }
+            document.write("5th Word is " + a[4] + "\n");
+            document.write("7th Word is " + a[6] + "\n");
+            document.write("10th Word is " + a[9] + "\n");
         </script>
     </body>
 </html>
