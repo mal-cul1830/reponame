@@ -28,14 +28,16 @@
         .registration-link a:active {
         color: blue;
         }
-
-        .registration-form{
-            display: none;
-        }
-        .registration-form:target{
-            display:block;
-        }
     </style>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+    </script> 
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+    </script> 
 <body>
     <h1>List of Courses Completed</h1>
     <div class = 'container'>
@@ -102,37 +104,39 @@
                 </div>
                 <hr>
             </ol>
+    </div>
+    <div class = 'row'>
+        <button data-toggle="collapse" data-target="#demo"><a href ="#registration-form">Register Here!</a></button>
+        <div id="demo" class="collapse">
+            <form target = "_blank" class = "registration-form" id = "registration-form" name = "registrationform">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" value="Enter Name"><br>
+                <label for="ph-number">Phone number:</label><br>
+                <input type="number" id="ph-number" name="ph-number" value="Enter 10 digit phone number" required><br><br>
+                <label for="course-choice">Choice of Course:</label><br>
+                <input type="radio" id="bachelors" name="course-choice" value="Bachelors" required>
+                <label for="bachelors">Bachelors</label>
+                <br>
+                <input type="radio" id="masters" name="course-choice" value="Masters" required>
+                <label for="masters">Masters</label>
+                <br>
+                <label for="description">Description:</label><br>
+                <input type="test" id="description" name="description" value="Description" onclick="" required><br>
+
+                <label for="subject-interests">Subject interests:</label><br>
+                <input type="checkbox" id="deeplearning" name="subject-interests" value="Deep Learning">
+                <label for="deeplearning">Deep Learning</label>
+                <br>
+                <input type="checkbox" id="softwaredev" name="subject-interests" value="Software Development">
+                <label for="softwaredev">Software Development</label>
+                <br>
+                <input type="checkbox" id="webdev" name="subject-interests" value="Web Development">
+                <label for="webdev">Web Development</label>
+                <br>
+                <input type = "submit" id = "submit" value = "Submit" onClick = "return validate_form()">
+            </form>
         </div>
     </div>
-    <div class = 'registration-link'>
-        <a href = "#registration-form">Register Here!</a>
-        <form target = "_blank" class = "registration-form" id = "registration-form" name = "registrationform">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" value="Enter Name"><br>
-            <label for="ph-number">Phone number:</label><br>
-            <input type="number" id="ph-number" name="ph-number" value="Enter 10 digit phone number" required><br><br>
-            <label for="course-choice">Choice of Course:</label><br>
-            <input type="radio" id="bachelors" name="course-choice" value="Bachelors" required>
-            <label for="bachelors">Bachelors</label>
-            <br>
-            <input type="radio" id="masters" name="course-choice" value="Masters" required>
-            <label for="masters">Masters</label>
-            <br>
-            <label for="description">Description:</label><br>
-            <input type="test" id="description" name="description" value="Description" onclick="" required><br>
-
-            <label for="subject-interests">Subject interests:</label><br>
-            <input type="checkbox" id="deeplearning" name="subject-interests" value="Deep Learning">
-            <label for="deeplearning">Deep Learning</label>
-            <br>
-            <input type="checkbox" id="softwaredev" name="subject-interests" value="Software Development">
-            <label for="softwaredev">Software Development</label>
-            <br>
-            <input type="checkbox" id="webdev" name="subject-interests" value="Web Development">
-            <label for="webdev">Web Development</label>
-            <br>
-            <input type = "submit" id = "submit" value = "Submit" onClick = "return validate_form()">
-        </form>
     </div>
     <script>
     try{document.addEventListener("keyup", function(event){
