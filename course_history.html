@@ -98,16 +98,16 @@
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" value="Enter Name"><br>
             <label for="ph-number">Phone number:</label><br>
-            <input type="number" id="ph-number" name="ph-number" value="Enter 10 digit phone number"><br><br>
+            <input type="number" id="ph-number" name="ph-number" value="Enter 10 digit phone number" required><br><br>
             <label for="course-choice">Choice of Course:</label><br>
-            <input type="radio" id="bachelors" name="course-choice" value="Bachelors">
+            <input type="radio" id="bachelors" name="course-choice" value="Bachelors" required>
             <label for="bachelors">Bachelors</label>
             <br>
-            <input type="radio" id="masters" name="course-choice" value="Masters">
+            <input type="radio" id="masters" name="course-choice" value="Masters" required>
             <label for="masters">Masters</label>
             <br>
             <label for="description">Description:</label><br>
-            <input type="test" id="description" name="description" value="Description"><br>
+            <input type="test" id="description" name="description" value="Description" onclick="" required><br>
 
             <label for="subject-interests">Subject interests:</label><br>
             <input type="checkbox" id="deeplearning" name="subject-interests" value="Deep Learning">
@@ -123,7 +123,17 @@
         </form>
     </div>
     <script>
-        function validate_form(){
+    try{document.addEventListener("keyup", function(event){
+        if(event.code == 13){
+            event.preventDefault();
+            console.log('clicking...')
+            document.getElementById('submit').click();
+        }
+    });}
+    catch(err){
+        document.write(errr);
+    }
+    function validate_form(){
     var form, list, index, item, checkedCount;
     checkedCount = 0;
     form = document.getElementById('registration-form');
