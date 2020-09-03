@@ -19,30 +19,36 @@
         }
     });
     function num_funcs(){
-        var num = parseInt(input.value);
+        try{var num = parseInt(input.value);}
+        catch(err){document.writeln(err)}
         console.log(num);
-        switch(num){
-            case (num>=10 && num<=100):
-                console.log('Number is in the range 10 -100');
-                break;
-            default:
-                console.log('Number is not in the range 10-100');
-                if(num<1){
-                    console.log('FIBBONACI NOT POSSIBLE')
+        try{
+                switch(num){
+                    case (num>=10 && num<=100):
+                        console.log('Number is in the range 10 -100');
+                        break;
+                    default:
+                        console.log('Number is not in the range 10-100');
+                        if(num<1){
+                            console.log('FIBBONACI NOT POSSIBLE')
+                        }
+                        else if(num == 1){
+                            document.writeln(0 + " ");
+                        }
+                        else{
+                            let a = 0, b = 1, temp = 0;
+                            for(let i = 0; i<num; ++i){
+                                document.write(a + " ");
+                                temp = b;
+                                b = a + b;
+                                a = temp;                      
+                            }
+                        }
                 }
-                else if(num == 1){
-                    document.write(0 + " ");
-                }
-                else{
-                    let a = 0, b = 1, temp = 0;
-                    for(let i = 0; i<num; ++i){
-                        document.write(a + " ");
-                        temp = b;
-                        b = a + b;
-                        a = temp;                      
-                    }
-                }
-        }
+            }
+            catch(error){
+                document.writeln(error)
+            }
     }
 
 
