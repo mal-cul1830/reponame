@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Register </title>
+        <style>
+            header{
+                align-items: center;
+                background-color: black;
+                padding: 1rem 2rem;
+                text-align: center;
+            }
+            header hr{
+                border-width: 0.004em;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script> 
+            $("submit").click(function(){
+                    $.post("demo.asp",
+                    {
+                        name: "Donald Duck",
+                        city: "Duckburg"
+                    },
+                    function(data, status){
+                        alert("Data:"+ data +"\nStatus:" + status);
+                    }
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <hr>
+            <h1>
+                Registration Form
+            </h1>
+            <hr>
+        </header>
+        <div action = "/demo.asp" class = 'registration-form'>
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city" value="city.."><br><br>
+                <input type="submit" value="Submit" name = "submit">                  
+            </form>
+        </div>
+    </body>
+</html>
