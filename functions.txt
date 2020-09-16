@@ -1,0 +1,24 @@
+FUnctionality - 
+- Missing functionality - 
+    - the quizzes tab is completely static 
+    - the options in the quizzes tab need to made radio buttons, given functionality 
+    - when the right option is clicked, it should display ‘RIGHT ANSWER’ else must indicate otherwise 
+- Main functionality - 
+    - must choose language from dropdown
+    - will show clickable words
+    - words will move to the main sentence on clicking in order of clicking
+    - before selecting all words - reform sentence should act as reset button and every word should return to the rack 
+    - if all words are selected, Check the correctness of this sentence sentence shows up
+    - on selecting Check the correctness of this sentence sentence, if the order is correct, it will say ‘CORRECT ANSWER’ else will say ‘WRONG ANSWER’
+    - correct answer
+        - no new buttons
+        - reform sentence should act as reset button again
+        - should display ‘’The aNswer is right!”
+    - wrong answer - 
+        - new button - 
+            - Get correct sentence 
+                - on clicking 
+                    - should show sentence 
+                    - should become a hide button with text - ‘Hide the correct sentence’
+                - when clicked again - transforms back into a get correct sentence button 
+
